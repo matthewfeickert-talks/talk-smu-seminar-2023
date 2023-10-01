@@ -33,22 +33,20 @@ jobs:
 
       - name: Setup build for deployment
         run: |
-          mkdir -p _build
-          cp -r assets _build/
-          cp -r figures _build/
-          cp index.html _build/
-          cp talk.md _build/
+          mkdir -p _site
+          cp -r assets _site/
+          cp -r figures _site/
+          cp index.html _site/
+          cp talk.md _site/
 
       - name: Fix permissions if needed
         run: |
-          chmod -c -R +rX "_build/" | while read line; do
+          chmod -c -R +rX "_site/" | while read line; do
             echo "::warning title=Invalid file permissions automatically fixed::$line"
           done
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
-        with:
-          path: '_build'
 
       - name: Deploy to GitHub Pages
         id: deployment
