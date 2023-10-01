@@ -148,7 +148,10 @@ October 2nd, 2023
       <img src="assets/logos/logo_IRIS-HEP.png"; width=100%>
    </a>
 </p>
-.caption[Institute for Research and Innovation in Software for High Energy Physics (IRIS-HEP)]
+.caption[Institute for Research and Innovation in Software for High Energy Physics (IRIS-HEP)
+
+supported by the National Science Foundation Cooperative Agreements [OAC-1836650](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1836650) <br>and [PHY-2323298](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2323298)
+]
 ]
 
 ---
