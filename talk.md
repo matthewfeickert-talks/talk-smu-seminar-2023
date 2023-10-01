@@ -349,7 +349,7 @@ In his [2022 PyHEP topical meeting update](https://indico.cern.ch/event/1140031/
 ]
 .kol-1-2.huge[
 <br><br>
-.bold[New directions in science are launched by new tools much more often than by new concepts.]<br>&mdash; Freeman Dyson
+.bold[New directions in science are launched by new tools much more often than by new concepts.]<br>&mdash; .italic[Imagined Worlds], 1997, Freeman Dyson
 ]
 
 ---
