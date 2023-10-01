@@ -9,7 +9,7 @@ count: false
 <br><br>
 [matthew.feickert@cern.ch](mailto:matthew.feickert@cern.ch)
 
-[SNOLAB Seminar Series](https://matthewfeickert-talks.github.io/talk-smu-seminar-2023/)
+[SMU Physics Department Speaker Series](https://matthewfeickert-talks.github.io/talk-smu-seminar-2023/)
 
 October 2nd, 2023
 
