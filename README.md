@@ -8,9 +8,9 @@ Talk given at SMU as part of the 2023 seminar series on October 2nd, 2023.
 > In this seminar I will present a high-level overview of how applications of data science tools from the modern scientific open source community, techniques and applications from the field of automatic differentiation, and strategies for enabling analysis reuse can be leveraged to achieve robust data analysis workflows at the HL-LHC scale.
 > I will also offer proposals for how these tools and techniques can be applied beyond the particle physics community to the broader scientific computing landscape.
 
-Viewable online [here](https://matthewfeickert-talks.github.io/talk-snolab-seminar-2023/index.html)
+Viewable online [here](https://matthewfeickert-talks.github.io/talk-smu-seminar-2023/index.html)
 
-Example code runnable on Binder: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/matthewfeickert-talks/talk-snolab-seminar-2023/HEAD?labpath=example_code)
+Example code runnable on Binder: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/matthewfeickert-talks/talk-smu-seminar-2023/HEAD?labpath=example_code)
 
 ## Acknowledgments
 
