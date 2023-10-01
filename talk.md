@@ -130,18 +130,19 @@ October 2nd, 2023
 ---
 # IRIS-HEP
 
-.kol-1-2[
+.kol-3-5[
 <p style="text-align:center;">
    <a href="https://inspirehep.net/literature/2628983">
       <img src="figures/IRIS-HEP-HL-LHC-gaps.png"; width=90%>
    </a>
 </p>
-.huge[
+.large[
 * LHC experiments as stakeholders
 * LHC operations as partners
 ]
 ]
-.kol-1-2[
+.kol-2-5[
+<br>
 <p style="text-align:center;">
    <a href="https://iris-hep.org/">
       <img src="assets/logos/logo_IRIS-HEP.png"; width=100%>
