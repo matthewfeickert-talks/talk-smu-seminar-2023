@@ -814,6 +814,26 @@ class: focus-slide, center
 
 ---
 # New Art: Analysis as a Differentiable Program
+
+<p style="text-align:center;">
+   <a href="https://inspirehep.net/literature/2050088">
+      <img src="figures/neos-pipeline.png"; width=100%>
+   </a>
+</p>
+
+.kol-1-2[
+* X
+]
+.kol-1-2[
+<p style="text-align:center;">
+   <a href="https://www.github.com/gradhep/neos">
+      <img src="https://raw.githubusercontent.com/gradhep/neos/master/nbs/assets/neos_logo.png"; width=40%>
+   </a>
+</p>
+]
+
+---
+# New Art: Analysis as a Differentiable Program
 .kol-1-2[
 - Provide differentiable analogue to histograms with kernel density estimation (KDE) or softmax
    - Need smooth change compared to abrupt changes in binned yields
