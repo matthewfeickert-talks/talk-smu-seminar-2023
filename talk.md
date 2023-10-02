@@ -1197,6 +1197,24 @@ Please checkout the many resources we have starting with the [website](https://s
 ]
 
 ---
+# Active Learning
+
+.kol-1-2.large[
+* Iterative procedure to actively collect new labelled data for an optimisation task
+* One or more new BSM parameter space points are selected and for each the upper limit on the BSM signal strength is evaluated
+* Regression on the signal strength upper limit in the multidimensional space
+* A new set of parameter space points are suggested for further analysis such that a sufficiently accurate exclusion contour may be obtained subject to some sampling budget constraints
+]
+.kol-1-2[
+<p style="text-align:center;">
+   <a href="https://indico.cern.ch/event/708041/contributions/3269754/">
+      <img src="figures/excursion-ACAT-2019.png"; width=100%>
+   </a>
+</p>
+.caption[[Active Learning for Excursion Set Estimation, ACAT 2019](https://indico.cern.ch/event/708041/contributions/3269754/)]
+]
+
+---
 # References
 
 1. Lukas Heinrich, .italic[[Distributed Gradients for Differentiable Analysis](https://indico.cern.ch/event/960587/contributions/4070325/)], [Future Analysis Systems and Facilities Workshop](https://indico.cern.ch/event/960587/), 2020.
