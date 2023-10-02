@@ -608,7 +608,9 @@ $$
 .large[Gain this through the frameworks creating _computational directed acyclic graphs_ and then applying the chain rule (to the operations)]
 ]
 .kol-1-2[
-.center.width-80[![DAG](figures/computational_graph.png)]
+<p style="text-align:center;">
+   <img src="figures/computational_graph.png"; width=85%>
+</p>
 ]
 ]
 
@@ -999,6 +1001,8 @@ Leveraging [REANA](https://www.reana.io/) reproducible research data analysis pl
 .huge[
 * General techniques and technologies applied to HEP problems, but not constrained to them
    - Automatic differentiation is a rich field of research unto itself
+   - [Machine-learning Optimized Design of Experiments (MODE) collaboration](https://mode-collaboration.github.io/) working towards detector design optimization using automatic differentiation
+   - [Fully differentiable branching programs](https://inspirehep.net/literature/2692444) (novel!) can attack problems across fields
 * Engagement with the broader scientific open source community
 * Planning for analysis reuse brings flexibility to leverage tooling
 ]
