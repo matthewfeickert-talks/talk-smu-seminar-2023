@@ -817,20 +817,23 @@ class: focus-slide, center
 
 <p style="text-align:center;">
    <a href="https://inspirehep.net/literature/2050088">
-      <img src="figures/neos-pipeline.png"; width=100%>
+      <img src="figures/neos-pipeline.png"; width=95%>
    </a>
 </p>
+.caption[[neos: End-to-End-Optimised Summary Statistics for High Energy Physics](https://inspirehep.net/literature/2050088), Nathan Simpson, Lukas Heinrich]
 
-.kol-1-2[
-* X
-]
-.kol-1-2[
+1. From data $d$ train a neural net with parameters $\varphi$, $f_{\varphi}(d)$, that produces an observable
+2. Bin the observable to construct a histogram $h$
+3. Build a HistFactory binned statistical model, $p$, from the histograms
+4. Perform statistical inference and construct a test statistic, $q$, from hypothesis test
+5. Construct monotonic test statistic, $\mathrm{CL}_{s}$, to summarize analysis sensitivity
+<!-- .kol-1-5[
 <p style="text-align:center;">
    <a href="https://www.github.com/gradhep/neos">
       <img src="https://raw.githubusercontent.com/gradhep/neos/master/nbs/assets/neos_logo.png"; width=40%>
    </a>
 </p>
-]
+] -->
 
 ---
 # New Art: Analysis as a Differentiable Program
