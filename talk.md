@@ -827,38 +827,81 @@ class: focus-slide, center
 3. Build a HistFactory binned statistical model, $p$, from the histograms
 4. Perform statistical inference and construct a test statistic, $q$, from hypothesis test
 5. Construct monotonic test statistic, $\mathrm{CL}_{s}$, to summarize analysis sensitivity
-<!-- .kol-1-5[
+
+---
+# New Art: Analysis as a Differentiable Program
+
 <p style="text-align:center;">
-   <a href="https://www.github.com/gradhep/neos">
-      <img src="https://raw.githubusercontent.com/gradhep/neos/master/nbs/assets/neos_logo.png"; width=40%>
+   <a href="https://inspirehep.net/literature/2050088">
+      <img src="figures/neos-pipeline.png"; width=95%>
    </a>
 </p>
-] -->
+.caption[[neos: End-to-End-Optimised Summary Statistics for High Energy Physics](https://inspirehep.net/literature/2050088), Nathan Simpson, Lukas Heinrich]
 
----
-# New Art: Analysis as a Differentiable Program
-.kol-1-2[
-- Provide differentiable analogue to histograms with kernel density estimation (KDE) or softmax
-   - Need smooth change compared to abrupt changes in binned yields
-<!-- - Make profile-likelihood differentiable with [fixed-point differentiation](https://implicit-layers-tutorial.org/implicit_functions/) -->
-- Samples fed into NN that produces observable (NN output) KDE transformed and histogrammed.
-- Construct `pyhf` model with observable and perform inference to get $\mathrm{CL}_{s}$ for POI.
-- Backpropagate the $\mathrm{CL}_{s}$ to update weights for NN.
+.large[
+.bold[Goal]: Express final summary statistic as a function of the input data $\mathcal{D}$ and observable parameters $\varphi$ and then optimize analysis sensitivity with $\partial \,\mathrm{CL_s} / \partial \varphi$ through back
+]
 
-<br>
-.center.width-40[[![neos_logo](https://raw.githubusercontent.com/gradhep/neos/master/nbs/assets/neos_logo.png)](https://github.com/gradhep/neos)]
-.footnote[Graphics from [Nathan Simpson's PyHEP 2020 talk](https://indico.cern.ch/event/882824/timetable/#46-neos-physics-analysis-as-a)]
+$$
+\mathrm{CL}_{s} = f(\mathcal{D},\varphi) = (f\textrm{sensitivity} \circ f\textrm{test stat} \circ f \textrm{probability model}  \circ f \textrm{histogram}  \circ f \textrm{observable})(\mathcal{D},\varphi)
+$$
+
+<!-- $\mathrm{CL_s} = f(\mathcal{D},\varphi) = (f_{\mathrm{sensitivity}} \circ f_{\mathrm{test\,stat}} \circ f_{\mathrm{likelihood}}  \circ f_{\mathrm{histogram}}  \circ f_{\mathrm{observable}})(\mathcal{D},\varphi)$ -->
+
+.large.bold[
+Requires all operations to be differentiable
 ]
-.kol-1-2.center[
-.width-40[[![neoflow](figures/kde_bins.gif)](https://indico.cern.ch/event/882824/timetable/#46-neos-physics-analysis-as-a)]
-.width-100[[![neoflow](figures/neoflow.png)](https://indico.cern.ch/event/882824/timetable/#46-neos-physics-analysis-as-a)]
-]
+
 
 ---
 # New Art: Analysis as a Differentiable Program
 
-.center[`neos` 3 bin KDE transformed observable (NN output) optimized with systematics w.r.t. $\mathrm{CL}_{s}$]
-.center.width-100[[![neos_gif](https://raw.githubusercontent.com/gradhep/neos/master/nbs/assets/pyhf_3.gif)](https://github.com/gradhep/neos)]
+<p style="text-align:center;">
+   <a href="https://inspirehep.net/literature/2050088">
+      <img src="figures/neos-pipeline.png"; width=95%>
+   </a>
+</p>
+.caption[[neos: End-to-End-Optimised Summary Statistics for High Energy Physics](https://inspirehep.net/literature/2050088), Nathan Simpson, Lukas Heinrich]
+
+.kol-3-5[
+* Histograms are non-differentiable, so use kernel density estimation (KDE) to provide differentiable analouge
+   - Accumulate distribution mass in bounds of histogram to construct "binned KDE"
+* pyhf is used as able to differentiate constructed likelihood function
+   - neos extends pyhf with differentiation of optimization routines
+]
+.kol-2-5[
+<p style="text-align:center;">
+   <a href="https://indico.cern.ch/event/882824/timetable/#46-neos-physics-analysis-as-a">
+      <img src="figures/kde_bins.gif"; width=70%>
+   </a>
+</p>
+]
+
+---
+# New Art: Analysis as a Differentiable Program
+
+<p style="text-align:center;">
+   <a href="https://inspirehep.net/literature/2050088">
+      <img src="figures/neos-pipeline.png"; width=95%>
+   </a>
+</p>
+.caption[[neos: End-to-End-Optimised Summary Statistics for High Energy Physics](https://inspirehep.net/literature/2050088), Nathan Simpson, Lukas Heinrich]
+
+1. From data $d$ train a neural net with parameters $\varphi$, $f_{\varphi}(d)$, that produces an observable
+2. .bold[Construct KDE of observable to construct histogram analouge, $h$]
+3. Build a HistFactory binned statistical model, $p$, from the histograms .bold[with pyhf]
+4. Perform statistical inference and construct a test statistic, $q$, from hypothesis test .bold[with pyhf + neos]
+5. Construct monotonic test statistic, $\mathrm{CL}_{s}$, to summarize analysis sensitivity
+
+---
+# New Art: Analysis as a Differentiable Program
+
+<p style="text-align:center;">
+   <a href="https://github.com/gradhep/neos">
+      <img src="https://raw.githubusercontent.com/gradhep/neos/master/nbs/assets/pyhf_3.gif"; width=95%>
+   </a>
+</p>
+.caption[`neos` 3 bin KDE transformed observable (NN output) optimized with systematics w.r.t. $\mathrm{CL}_{s}$]
 
 .kol-1-3[
 - .neos-orange[Background] and .neos-blue[signal] samples
